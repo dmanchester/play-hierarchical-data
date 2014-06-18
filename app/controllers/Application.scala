@@ -24,8 +24,8 @@ object Application extends Controller {
       case (theMap, (country, newCity)) => {
 
         val cities = theMap.get(country) match {
-            case None => Seq(newCity)
-            case Some(existingCities) => existingCities :+ newCity
+          case None => Seq(newCity)
+          case Some(existingCities) => existingCities :+ newCity
         }
 
         theMap + ((country, cities))
