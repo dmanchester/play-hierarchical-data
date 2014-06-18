@@ -1,0 +1,30 @@
+@(countriesWithCities: Traversable[(Country, Seq[City])])
+
+@main("play-hierarchical-data") {
+
+  <h1>Some cities and their populations.</h1>
+  <table class="table table-bordered table-condensed width-auto">
+    @countriesWithCities.map { case (country, cities) =>
+      <tr class="active">
+        <td colspan="2"><strong>@country.name</strong></td>
+      </tr>
+      @cities.map { city =>
+        <tr>
+          @* Wasn't able to adjust cell padding on following two "td" elements,
+             so wrapped cell contents in "div" elements and padded those. Kind
+             of a hack. *@
+          <td>
+            <div class="heavy-padding-right">@city.name</div>
+          </td>
+          <td class="text-right">
+            <div class="heavy-padding-left">
+              @* Format number with thousands separators. *@
+              @("%,d".format(city.population))
+            </div>
+          </td>
+        </tr>
+      }
+    }
+  </table>
+  <small>Population values from urban agglomeration data, United Nations' <a href="http://esa.un.org/unup/index.html">2011 World Urbanization Prospects</a>.</small>
+}

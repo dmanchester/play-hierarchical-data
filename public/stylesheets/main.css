@@ -1,0 +1,15 @@
+.width-auto {
+  width: auto;	
+}
+
+.medium-padding-sides {
+  padding: 0px 10px;
+}
+
+.heavy-padding-left {
+  padding-left: 20px;
+}
+
+.heavy-padding-right {
+  padding-right: 20px;
+}
