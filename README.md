@@ -34,5 +34,5 @@ A simple application that works with hierarchical data and [Play Framework](http
     ```
     play run
     ```
-    
 
+4. Navigate to the application in a browser. When notified that the database needs evolution, click `Apply this script now`.
