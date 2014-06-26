@@ -19,19 +19,19 @@ A simple application that works with hierarchical data and [Play Framework](http
 
 1. Clone this repository:
 
-    ```bash
+    ```
     git clone https://github.com/dmanchester/play-hierarchical-data.git
     ```
 
 2. Change to the application directory:
 
-    ```bash
+    ```
     cd play-hierarchical-data
     ```
 
 3. Run the application:
 
-    ```bash
+    ```
     play run
     ```
     
