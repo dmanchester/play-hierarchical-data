@@ -9,9 +9,9 @@ A simple application that works with hierarchical data and [Play Framework](http
 
 #### Prerequisites
 
-* Play 2.2.*x*
+* Play 2.2.x
 
- *This application was created in Play 2.2.1, but it should run with any 2.2.*x* version. It may also work with other 2.*x* versions.*
+  *This application was created in Play 2.2.1, but it should run with any 2.2.x version. It may also work with other 2.x versions.*
 
 * Git
 
@@ -19,19 +19,19 @@ A simple application that works with hierarchical data and [Play Framework](http
 
 1. Clone this repository:
 
-    ```shell
+    ```bash
     git clone https://github.com/dmanchester/play-hierarchical-data.git
     ```
 
 2. Change to the application directory:
 
-    ```shell
+    ```bash
     cd play-hierarchical-data
     ```
 
 3. Run the application:
 
-    ```shell
+    ```bash
     play run
     ```
     
