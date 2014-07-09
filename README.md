@@ -3,7 +3,7 @@ play-hierarchical-data
 
 A simple application that works with hierarchical data and [Play Framework](http://www.playframework.com/)'s [Anorm library](http://www.playframework.com/documentation/2.2.x/ScalaAnorm). Accompanying blog post here:
 
-[ADD URL]
+http://oklampy.wordpress.com/2014/07/01/working-with-anorm-and-hierarchical-data
 
 ### Running this application
 
