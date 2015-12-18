@@ -6,13 +6,13 @@ import play.api.Play.current
 import anorm._
 import anorm.SqlParser._
 
-case class Country(id: Pk[Int] = NotAssigned, name: String)
-case class City(id: Pk[Int] = NotAssigned, countryId: Int, name: String, population: Int)
+case class Country(id: Option[Int] = None, name: String)
+case class City(id: Option[Int] = None, countryId: Int, name: String, population: Int)
 
 object Country {
 
   val simple: RowParser[Country] = {
-    get[Pk[Int]]("country.id") ~
+    get[Option[Int]]("country.id") ~
     str("country.name") map {
       case id~name => Country(id, name)
     }
@@ -22,7 +22,7 @@ object Country {
 object City {
 
   val simple: RowParser[City] = {
-    get[Pk[Int]]("city.id") ~
+    get[Option[Int]]("city.id") ~
     int("city.country_id") ~
     str("city.name") ~
     int("city.population") map {
