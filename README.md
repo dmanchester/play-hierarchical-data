@@ -1,21 +1,11 @@
 play-hierarchical-data
 ======================
 
-A simple application that works with hierarchical data and [Play Framework](http://www.playframework.com/)'s [Anorm library](http://www.playframework.com/documentation/2.2.x/ScalaAnorm). Accompanying blog post here:
+A simple Play 2.3 application that works with hierarchical data and [Play Framework](https://www.playframework.com/)'s [Anorm library](https://playframework.com/documentation/2.3.x/ScalaAnorm). Accompanying blog post here:
 
 http://oklampy.wordpress.com/2014/07/08/working-with-anorm-and-hierarchical-data
 
-### Running this application
-
-#### Prerequisites
-
-* Play 2.2.x
-
-  *This application was created in Play 2.2.1, but it should run with any 2.2.x version. It may also work with other 2.x versions.*
-
-* Git
-
-#### Instructions
+### How to run this application
 
 1. Clone this repository:
 
@@ -32,7 +22,9 @@ http://oklampy.wordpress.com/2014/07/08/working-with-anorm-and-hierarchical-data
 3. Run the application:
 
     ```
-    play run
+    activator run
     ```
+
+    *Application can probably also be run with plain `sbt`.*
 
 4. Navigate to the application in a browser. When notified that the database needs evolution, click `Apply this script now`.
