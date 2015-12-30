@@ -18,20 +18,17 @@ object Application extends Controller {
         country0.name < country1.name ||
         (country0.name == country1.name && city0.population > city1.population)
     }
-    
+
     val countriesToCities = countriesAndCities.foldLeft(ListMap.empty[Country, Seq[City]]) {
 
       case (theMap, (country, newCity)) => {
 
-        val cities = theMap.get(country) match {
-          case None => Seq(newCity)
-          case Some(existingCities) => existingCities :+ newCity
-        }
+        val existingCities = theMap.getOrElse(country, Seq.empty[City])
 
-        theMap + ((country, cities))
+        theMap + ((country, existingCities :+ newCity))
       }
     }
-    
+
     Ok(views.html.cities(countriesToCities))
   }
 
